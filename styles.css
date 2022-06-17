@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: hsla(240, 6%, 21%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+    --gray: hsla(240, 9%, 89%, 1);
+    --dark-gray: hsla(240, 6%, 21%, 1);
+    --blue: hsla(194, 97%, 31%, 1);
+    font-size: 62.25%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    display: grid;
+    min-height: 100vh;
+    color: var(--dark-gray);
+    overflow-x: hidden;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+main {
+    width: clamp(40rem, 40rem + 35vw, 90rem);
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timer-wrapper {
+    font-size: clamp(4rem, 4rem + 10vw, 11rem);
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.sounds-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 31rem;
+}
+
+.sound-card {
+    width: clamp(1rem, 4rem + 20vw, 14rem);
+    height: clamp(1.5rem, 3rem + 25vw, 15rem);
+    background-color: var(--gray);
+    border-radius: 2.4rem;
+}
+
+.active {
+    background-color: var(--blue);
+}
+
+.active svg path {
+    fill: var(--white);
+}
+
+@media (max-width:780px) {
+    main {
+        flex-direction: column;
+        height: clamp(40rem, 40rem + 35vw, 80rem);
+    }
+}
