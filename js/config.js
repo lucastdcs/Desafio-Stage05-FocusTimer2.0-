@@ -6,14 +6,13 @@ const buttonTree = document.querySelector('#tree')
 const buttonCloud = document.querySelector('#cloud')
 const buttonStand = document.querySelector('#stand')
 const buttonFire = document.querySelector('#fire')
-const soundCards = document.querySelector('.sounds-menu button')
 let minutesDisplay = document.querySelector('.minutes')
 let secondsDisplay = document.querySelector('.seconds')
 
-const treeSound = new Audio("../sounds/Floresta.wav")
-const cloudSound = new Audio("../sounds/Chuva.wav")
-const standSound = new Audio("../sounds/Cafeteria.wav")
-const fireSound = new Audio("../sounds/Lareira.wav")
+const treeSound = new Audio("https://github.com/lucastdcs/Desafio-Stage05-FocusTimer2.0-/blob/main/sounds/Floresta.wav?raw=true")
+const cloudSound = new Audio("https://github.com/lucastdcs/Desafio-Stage05-FocusTimer2.0-/blob/main/sounds/Chuva.wav?raw=true")
+const standSound = new Audio("https://github.com/lucastdcs/Desafio-Stage05-FocusTimer2.0-/blob/main/sounds/Cafeteria.wav?raw=true")
+const fireSound = new Audio("https://github.com/lucastdcs/Desafio-Stage05-FocusTimer2.0-/blob/main/sounds/Lareira.wav?raw=true")
 
 
 export {
@@ -27,7 +26,6 @@ export {
     buttonCloud,
     buttonStand,
     buttonFire,
-    soundCards,
     treeSound,
     cloudSound,
     standSound,

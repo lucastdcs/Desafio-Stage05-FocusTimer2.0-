@@ -3,7 +3,6 @@ import {
     cloudSound,
     standSound,
     fireSound,
-
 } from "./config.js"
 
 export default function() {

@@ -24,6 +24,10 @@ export function controls() {
             element.classList.add('active')
             sounds()
             sound.play()
+            sound.loop = true
+            if (sound.loop = true) {
+                console.log('its alright sir')
+            }
         } else if (element.classList.contains('active') == true) {
             element.classList.remove('active')
             sound.pause()

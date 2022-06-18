@@ -20,6 +20,7 @@ body {
     min-height: 100vh;
     color: var(--dark-gray);
     overflow-x: hidden;
+    padding: 0 10rem;
 }
 
 button {
@@ -29,16 +30,19 @@ button {
 }
 
 main {
-    width: clamp(40rem, 40rem + 35vw, 90rem);
+    width: 100%;
+    max-width: 82rem;
     display: flex;
     justify-self: center;
     align-self: center;
     justify-content: space-between;
     align-items: center;
+    gap: 5rem;
 }
 
 .timer-wrapper {
-    font-size: clamp(4rem, 4rem + 10vw, 11rem);
+    width: fit-content;
+    font-size: clamp(6rem, 6rem + 10vw, 11rem);
 }
 
 .timer {
@@ -49,11 +53,12 @@ main {
 
 .controls {
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+    width: 100%;
+    justify-content: space-around;
 }
 
 .sounds-menu {
+    width: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,9 +82,22 @@ main {
     fill: var(--white);
 }
 
-@media (max-width:780px) {
+@media (max-width:800px) {
+    body {
+        padding: 0 1rem;
+    }
     main {
+        width: fit-content;
         flex-direction: column;
         height: clamp(40rem, 40rem + 35vw, 80rem);
+        display: grid;
+        grid-template-areas: "A" "B";
+    }
+    .timer-wrapper {
+        grid-area: "A";
+        justify-self: center;
+    }
+    .sounds-menu {
+        grid-area: "B";
     }
 }
